@@ -12,7 +12,7 @@ div {
   margin: 0 auto;
   width: max-content;
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-  font-size: 1000px;
+  font-size: 100vh;
   line-height: 1;
   color: #fff;
   text-transform: uppercase;
