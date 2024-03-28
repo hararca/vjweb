@@ -1,0 +1,20 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  height: 100vh;
+  overflow: hidden;
+}
+
+div {
+  display: block;
+  margin: 0 auto;
+  width: max-content;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 1000px;
+  line-height: 1;
+  color: #fff;
+  text-transform: uppercase;
+  font-style: italic;
+}

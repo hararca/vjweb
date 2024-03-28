@@ -1,0 +1,18 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  height: 100vh;
+  overflow: hidden;
+}
+
+div {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  font-weight: bold;
+  color: white;
+  line-height: 0;
+  white-space: nowrap;
+}

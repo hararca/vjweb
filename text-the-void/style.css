@@ -1,0 +1,32 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  background: #000;
+  overflow: hidden;
+}
+
+#word {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  font-weight: bold;
+  color: white;
+  text-transform: uppercase;
+  line-height: 0;
+  animation: blink calc(1s / 16) infinite;
+}
+
+/* animation that mimic a blinking effect */
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
