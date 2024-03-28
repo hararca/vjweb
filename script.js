@@ -22,3 +22,27 @@ const changeSrcRandomly = () => {
 // Initial call to start the process
 let initialDelay = Math.random() * 9000 + 1000;
 setTimeout(changeSrcRandomly, initialDelay);
+
+// invert the colors of the page by pressing the "s" key
+document.addEventListener("keydown", (event) => {
+  if (event.key === "s") {
+    document.body.style.filter = "invert(1)";
+  }
+});
+document.addEventListener("keyup", (event) => {
+  if (event.key === "s") {
+    document.body.style.filter = "invert(0)";
+  }
+});
+
+// Add strobo animation by pressing the "a" key
+document.addEventListener("keydown", (event) => {
+  if (event.key === "a") {
+    document.body.style.animation = "strobo 0.1s infinite";
+  }
+});
+document.addEventListener("keyup", (event) => {
+  if (event.key === "a") {
+    document.body.style.animation = "none";
+  }
+});
