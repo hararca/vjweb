@@ -1,5 +1,5 @@
-const pages = ["./emotezzz", "./kanjizz", "./marqueeee", "./text-the-void"];
-const iframe = document.getElementById("iframe");
+const pages = ['./emotezzz', './kanjizz', './marqueeee', './text-the-void'];
+const iframe = document.getElementById('iframe');
 let currentPage = 0;
 
 // Function that returns a random page from the pages array
@@ -23,26 +23,44 @@ const changeSrcRandomly = () => {
 let initialDelay = Math.random() * 9000 + 1000;
 setTimeout(changeSrcRandomly, initialDelay);
 
+// Keep focus on the body when clicking on the iframe
+window.onblur = function () {
+  setTimeout(function () {
+    window.focus();
+  }, 0);
+};
+
 // invert the colors of the page by pressing the "s" key
-document.addEventListener("keydown", (event) => {
-  if (event.key === "s") {
-    document.body.style.filter = "invert(1)";
+document.addEventListener('keydown', (event) => {
+  if (event.key === 's') {
+    document.body.style.filter = 'invert(1)';
   }
 });
-document.addEventListener("keyup", (event) => {
-  if (event.key === "s") {
-    document.body.style.filter = "invert(0)";
+document.addEventListener('keyup', (event) => {
+  if (event.key === 's') {
+    document.body.style.filter = 'invert(0)';
   }
 });
 
 // Add strobo animation by pressing the "a" key
-document.addEventListener("keydown", (event) => {
-  if (event.key === "a") {
-    document.body.style.animation = "strobo 0.1s infinite";
+document.addEventListener('keydown', (event) => {
+  if (event.key === 'a') {
+    document.body.style.animation = 'strobo 0.1s infinite';
   }
 });
-document.addEventListener("keyup", (event) => {
-  if (event.key === "a") {
-    document.body.style.animation = "none";
+document.addEventListener('keyup', (event) => {
+  if (event.key === 'a') {
+    document.body.style.animation = 'none';
+  }
+});
+// Add a distorsion effect by pressing the "g" key
+document.addEventListener('keydown', (event) => {
+  if (event.key === 'd') {
+    document.body.classList.add('noise');
+  }
+});
+document.addEventListener('keyup', (event) => {
+  if (event.key === 'd') {
+    document.body.classList.remove('noise');
   }
 });

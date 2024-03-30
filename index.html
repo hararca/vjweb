@@ -8,6 +8,19 @@
     <script src="script.js" defer></script>
   </head>
   <body>
+    <svg viewBox="0 0 180 100" class="visually-hidden">
+      <filter id="noise" x="0%" y="0%" width="100%" height="100%">
+        <feTurbulence baseFrequency="0.01 0.1" result="NOISE" numOctaves="1" />
+        <feDisplacementMap
+          in="SourceGraphic"
+          in2="NOISE"
+          scale="90"
+          xChannelSelector="R"
+          yChannelSelector="R"
+        ></feDisplacementMap>
+      </filter>
+    </svg>
+
     <iframe
       id="iframe"
       src="./emotezzz"
