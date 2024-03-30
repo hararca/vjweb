@@ -30,37 +30,57 @@ window.onblur = function () {
   }, 0);
 };
 
-// invert the colors of the page by pressing the "s" key
-document.addEventListener('keydown', (event) => {
-  if (event.key === 's') {
+// Function to add keydown and keyup event listeners for a specific key
+const addKeyListeners = (key, downCallback, upCallback) => {
+  document.addEventListener('keydown', (event) => {
+    if (event.key === key) {
+      downCallback();
+    }
+  });
+  document.addEventListener('keyup', (event) => {
+    if (event.key === key) {
+      upCallback();
+    }
+  });
+};
+
+// Call the addKeyListeners function for each key and its corresponding callbacks
+addKeyListeners(
+  's',
+  () => {
     document.body.style.filter = 'invert(1)';
-  }
-});
-document.addEventListener('keyup', (event) => {
-  if (event.key === 's') {
+  },
+  () => {
     document.body.style.filter = 'invert(0)';
   }
-});
+);
 
-// Add strobo animation by pressing the "a" key
-document.addEventListener('keydown', (event) => {
-  if (event.key === 'a') {
+addKeyListeners(
+  'a',
+  () => {
     document.body.style.animation = 'strobo 0.1s infinite';
-  }
-});
-document.addEventListener('keyup', (event) => {
-  if (event.key === 'a') {
+  },
+  () => {
     document.body.style.animation = 'none';
   }
-});
-// Add a distorsion effect by pressing the "g" key
-document.addEventListener('keydown', (event) => {
-  if (event.key === 'd') {
+);
+
+addKeyListeners(
+  'd',
+  () => {
     document.body.classList.add('noise');
-  }
-});
-document.addEventListener('keyup', (event) => {
-  if (event.key === 'd') {
+  },
+  () => {
     document.body.classList.remove('noise');
   }
-});
+);
+
+addKeyListeners(
+  'm',
+  () => {
+    window.location.href = './manual.html';
+  },
+  () => {
+    window.location.href = './index.html';
+  }
+);
