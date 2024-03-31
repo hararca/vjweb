@@ -1,6 +1,12 @@
 const iframes = document.querySelectorAll('iframe');
 
-const pages = ['./emotezzz', './kanjizz', './marqueeee', './text-the-void'];
+const pages = [
+  './emotezzz',
+  './kanjizz',
+  './marqueeee',
+  './text-the-void',
+  './headzzz',
+];
 
 // Initialise the iframes with the pages and display just the first one
 iframes.forEach((iframe, index) => {
@@ -26,7 +32,7 @@ const changeVisibility = (index) => {
 
 // Add event listeners for the number keys
 document.addEventListener('keydown', (event) => {
-  if (event.key >= 1 && event.key <= 4) {
+  if (event.key >= 1 && event.key <= pages.length) {
     changeVisibility(event.key - 1);
   }
 });

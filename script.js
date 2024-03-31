@@ -1,4 +1,10 @@
-const pages = ['./emotezzz', './kanjizz', './marqueeee', './text-the-void'];
+const pages = [
+  './emotezzz',
+  './kanjizz',
+  './marqueeee',
+  './text-the-void',
+  './headzzz',
+];
 const iframe = document.getElementById('iframe');
 let currentPage = 0;
 
