@@ -11,9 +11,10 @@ const addKeyListeners = (key, downCallback, upCallback) => {
     }
   });
 };
+
 // Call the addKeyListeners function for each key and its corresponding callbacks
 addKeyListeners(
-  's',
+  'i',
   () => {
     document.body.style.filter = 'invert(1)';
   },
@@ -23,7 +24,7 @@ addKeyListeners(
 );
 
 addKeyListeners(
-  'a',
+  's',
   () => {
     document.body.style.animation = 'strobo 0.1s infinite';
   },
@@ -39,29 +40,5 @@ addKeyListeners(
   },
   () => {
     document.body.classList.remove('noise');
-  }
-);
-
-addKeyListeners(
-  'm',
-  () => {
-    if (window.location.href.includes('manual.html')) {
-      window.location.href = './index.html';
-    } else {
-      window.location.href = './manual.html';
-    }
-  },
-  () => {
-    return;
-  }
-);
-
-addKeyListeners(
-  'r',
-  () => {
-    window.location.reload();
-  },
-  () => {
-    return;
   }
 );
