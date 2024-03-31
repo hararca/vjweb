@@ -10,6 +10,24 @@
     <script src="events.js" defer></script>
   </head>
   <body>
+    <svg viewBox="0 0 180 100" class="visually-hidden">
+      <defs>
+        <filter id="noise" x="0%" y="0%" width="100%" height="100%">
+          <feTurbulence
+            baseFrequency="0.01 0.1"
+            result="NOISE"
+            numOctaves="1"
+          />
+          <feDisplacementMap
+            in="SourceGraphic"
+            in2="NOISE"
+            scale="90"
+            xChannelSelector="R"
+            yChannelSelector="R"
+          ></feDisplacementMap>
+        </filter>
+      </defs>
+    </svg>
     <iframe id="iframe01" src=""></iframe>
     <iframe id="iframe02" src=""></iframe>
     <iframe id="iframe03" src=""></iframe>
