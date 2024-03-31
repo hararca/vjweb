@@ -1,6 +1,6 @@
 .noise {
   scale: 1.1;
-  filter: url(./filters.svg#noise);
+  filter: url(#noise);
 }
 
 @keyframes strobo {
