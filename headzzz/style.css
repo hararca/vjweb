@@ -1,0 +1,10 @@
+body {
+  display: grid;
+  place-items: center;
+  background: red;
+}
+
+img {
+  height: 100vh;
+  object-fit: cover;
+}
