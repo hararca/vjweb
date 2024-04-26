@@ -6,6 +6,7 @@ const pages = [
   './marqueeee',
   './text-the-void',
   './headzzz',
+  './gifzzz',
 ];
 
 // Initialise the iframes with the pages and display just the first one
@@ -36,3 +37,10 @@ document.addEventListener('keydown', (event) => {
     changeVisibility(event.key - 1);
   }
 });
+
+// Keep focus on the body when clicking on the iframe
+window.onblur = function () {
+  setTimeout(function () {
+    window.focus();
+  }, 0);
+};

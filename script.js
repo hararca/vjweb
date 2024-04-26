@@ -4,6 +4,7 @@ const pages = [
   './marqueeee',
   './text-the-void',
   './headzzz',
+  './gifzzz',
 ];
 const iframe = document.getElementById('iframe');
 let currentPage = 0;
