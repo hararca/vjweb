@@ -13,6 +13,15 @@ const addKeyListeners = (key, downCallback, upCallback) => {
 };
 
 // Call the addKeyListeners function for each key and its corresponding callbacks
+// switch beteewn manual.html and index.html by pressing 'm'
+addKeyListeners('m', () => {
+  const currentUrl = window.location.href;
+  if (currentUrl.includes('manual')) {
+    window.location.href = 'index.html';
+  } else {
+    window.location.href = 'manual.html';
+  }
+});
 addKeyListeners(
   'i',
   () => {
