@@ -6,7 +6,9 @@ Web experiments for projected visuals
 
 ## How to run the app
 
-You will need to run the app on a local server. You can use Python's built-in HTTP server to do this. Here's how:
+For a quick sneak peak, just visit: [https://hararca.github.io/vjweb/](https://hararca.github.io/vjweb/)
+
+For better performance and reduced loading times you will want to run the app on a local server. You can use Python's built-in HTTP server to do this. Here's how:
 
 1. Open a terminal and navigate to the root directory of the project.
 
