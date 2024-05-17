@@ -1,20 +1,13 @@
-const words = [
-  "IF",
-  "YOU",
-  "FIND",
-  "THIS",
-  "WORLD",
-  "BAD",
-  "YOU",
-  "SHOULD",
-  "SEE",
-  "SOME",
-  "OF",
-  "THE",
-  "OTHERS",
-];
+import { words as words01 } from '../texts/text01.js';
+import { words as words02 } from '../texts/text02.js';
+import { words as words03 } from '../texts/text03.js';
+import { words as words04 } from '../texts/text04.js';
 
-const wordElement = document.getElementById("word");
+// Pick a random text from the list of texts
+const texts = [words01, words02, words03, words04];
+const words = texts[Math.floor(Math.random() * texts.length)];
+
+const wordElement = document.getElementById('word');
 
 // Replace the content in the div with ID "word" with a random word from the array
 const randomIndex = Math.floor(Math.random() * words.length);
