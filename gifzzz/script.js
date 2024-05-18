@@ -1,4 +1,4 @@
-const imagesAmount = 3;
+const imagesAmount = 19;
 // create random number generator with leading zero
 const randomImage = () => {
   return `./images/${String(Math.ceil(Math.random() * imagesAmount)).padStart(
