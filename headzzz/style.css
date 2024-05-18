@@ -1,7 +1,9 @@
 body {
   display: grid;
   place-items: center;
-  background: red;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
 }
 
 img {
